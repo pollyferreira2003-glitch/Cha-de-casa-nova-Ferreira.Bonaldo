@@ -1,0 +1,2299 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chá de Casa Nova - Polly & Gabriel</title>
+
+   
+
+    <!-- Importando as fontes do Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+   
+
+    <style>
+
+        /* Configurações Globais e Reset */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        body {
+
+            font-family: 'Montserrat', sans-serif;
+
+            background-color: #fbf9f6;
+
+            color: #2b2b2b;
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        /* Menu de Navegação Superior */
+
+        .navbar {
+
+            position: absolute;
+
+            top: 0;
+
+            width: 100%;
+
+            z-index: 10;
+
+            padding: 20px 0;
+
+            background: rgba(0, 0, 0, 0.15);
+
+        }
+
+
+
+        .navbar ul {
+
+            display: flex;
+
+            justify-content: center;
+
+            list-style: none;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+
+            padding: 0 10px;
+
+        }
+
+
+
+        .navbar a {
+
+            text-decoration: none;
+
+            color: #ffffff;
+
+            font-size: 11px;
+
+            font-weight: 400;
+
+            letter-spacing: 2px;
+
+            transition: opacity 0.3s;
+
+        }
+
+
+
+        .navbar a:hover {
+
+            opacity: 0.7;
+
+        }
+
+
+
+        /* SEÇÃO 1: Tela Inicial */
+
+        .hero-section {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 100vh;
+
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2070');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding-top: 60px;
+
+        }
+
+
+
+        .invite-card {
+
+            background-color: #fcfcfc;
+
+            width: 90%;
+
+            max-width: 420px;
+
+            height: 80vh;
+
+            max-height: 600px;
+
+            border-radius: 200px 200px 12px 12px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px;
+
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+
+        }
+
+
+
+        .date {
+
+            font-size: 14px;
+
+            letter-spacing: 3px;
+
+            color: #695e50;
+
+            margin-bottom: 25px;
+
+            font-weight: 300;
+
+        }
+
+
+
+        .title {
+
+            font-family: 'Alex Brush', cursive;
+
+            font-size: 64px;
+
+            color: #2b2b2b;
+
+            font-weight: 400;
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+
+            text-transform: lowercase;
+
+        }
+
+
+
+        .title::first-letter {
+
+            text-transform: uppercase;
+
+        }
+
+
+
+        .divider {
+
+            width: 50px;
+
+            height: 1px;
+
+            background-color: #b5a48c;
+
+            margin-bottom: 30px;
+
+        }
+
+
+
+        .address {
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+            letter-spacing: 1.5px;
+
+            color: #8c7e6c;
+
+            margin-bottom: 35px;
+
+            font-weight: 400;
+
+        }
+
+
+
+        .names {
+
+            font-family: 'Alex Brush', cursive;
+
+            font-size: 42px;
+
+            color: #2b2b2b;
+
+            font-weight: 400;
+
+        }
+
+
+
+        /* SEÇÃO 2: Detalhes do Evento */
+
+        .details-section {
+
+            background-color: #fbf9f6;
+
+            padding: 100px 20px 60px 20px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+        }
+
+
+
+        .section-subtitle {
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            color: #b5a48c;
+
+            font-weight: 400;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .section-title {
+
+            font-family: 'Alex Brush', cursive;
+
+            font-size: 54px;
+
+            color: #2b2b2b;
+
+            font-weight: 400;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .small-divider {
+
+            width: 40px;
+
+            height: 1px;
+
+            background-color: #b5a48c;
+
+            margin-bottom: 60px;
+
+        }
+
+
+
+        .info-grid {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: flex-start;
+
+            gap: 80px;
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        .info-card {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-decoration: none;
+
+            color: inherit;
+
+            width: 280px;
+
+            cursor: pointer;
+
+            transition: transform 0.3s ease, opacity 0.3s ease;
+
+        }
+
+
+
+        .info-card:not(.no-link):hover {
+
+            transform: translateY(-5px);
+
+            opacity: 0.8;
+
+        }
+
+
+
+        .info-card.no-link {
+
+            cursor: default;
+
+        }
+
+
+
+        .icon-circle {
+
+            width: 70px;
+
+            height: 70px;
+
+            border-radius: 50%;
+
+            background-color: #f3ece4;
+
+            border: 1px solid #e3d7c7;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .icon-circle svg {
+
+            width: 26px;
+
+            height: 26px;
+
+            fill: #b5a48c;
+
+        }
+
+
+
+        .card-label {
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            color: #b5a48c;
+
+            font-weight: 600;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .card-main-text {
+
+            font-size: 18px;
+
+            color: #2b2b2b;
+
+            font-weight: 400;
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+        .card-sub-text {
+
+            font-size: 12px;
+
+            color: #8c7e6c;
+
+            font-weight: 300;
+
+        }
+
+
+
+        /* SEÇÃO 3: Espaço do Evento (Carrossel) */
+
+        .carousel-section {
+
+            background-color: #fbf9f6;
+
+            padding: 20px 20px 60px 20px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+        }
+
+
+
+        .carousel-container {
+
+            position: relative;
+
+            width: 100%;
+
+            max-width: 800px;
+
+            height: 500px;    
+
+            overflow: hidden;
+
+            border-radius: 12px;
+
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+
+            margin-top: 20px;
+
+        }
+
+
+
+        .carousel-track {
+
+            display: flex;
+
+            width: 700%;
+
+            height: 100%;
+
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+
+        }
+
+
+
+        .carousel-slide {
+
+            width: 14.285%;
+
+            height: 100%;
+
+        }
+
+
+
+        .carousel-slide img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+
+        .carousel-dots {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 25px;
+
+        }
+
+
+
+        .dot {
+
+            width: 8px;
+
+            height: 8px;
+
+            border-radius: 50%;
+
+            background-color: #e3d7c7;
+
+            transition: background-color 0.3s;
+
+        }
+
+
+
+        .dot.active {
+
+            background-color: #b5a48c;
+
+        }
+
+
+
+        /* SEÇÃO 4: Lista de Presentes */
+
+        .gifts-section {
+
+            background-color: #ede6dc;
+
+            padding: 80px 20px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+        }
+
+
+
+        .gifts-section .section-subtitle {
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            color: #b5a48c;
+
+            font-weight: 400;
+
+            margin-bottom: 10px;
+
+            text-transform: uppercase;
+
+        }
+
+
+
+        .gifts-section .section-title {
+
+            font-family: 'Alex Brush', cursive;
+
+            font-size: 56px;
+
+            color: #2b2b2b;
+
+            font-weight: 400;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .gifts-section .small-divider {
+
+            width: 35px;
+
+            height: 1px;
+
+            background-color: #b5a48c;
+
+            margin-bottom: 35px;
+
+        }
+
+
+
+        .gifts-description {
+
+            font-size: 12px;
+
+            line-height: 2;
+
+            letter-spacing: 0.8px;
+
+            color: #7a6f5f;
+
+            max-width: 640px;
+
+            margin: 0 auto 30px auto;
+
+            font-weight: 400;
+
+        }
+
+
+
+        .items-counter {
+
+            font-size: 11px;
+
+            color: #b5a48c;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 30px;
+
+            font-weight: 400;
+
+        }
+
+
+
+        /* Filtros por Categorias */
+
+        .filter-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+            max-width: 1000px;
+
+            width: 100%;
+
+            margin-bottom: 50px;
+
+        }
+
+
+
+        .filter-btn {
+
+            background-color: transparent;
+
+            border: 1px solid #d5cbb8;
+
+            color: #7a6f5f;
+
+            font-family: 'Montserrat', sans-serif;
+
+            font-size: 10px;
+
+            font-weight: 500;
+
+            letter-spacing: 2px;
+
+            padding: 10px 24px;
+
+            border-radius: 20px;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-transform: uppercase;
+
+        }
+
+
+
+        .filter-btn:hover {
+
+            border-color: #c4b499;
+
+            color: #2b2b2b;
+
+        }
+
+
+
+        .filter-btn.active {
+
+            background-color: #c4b499;
+
+            border-color: #c4b499;
+
+            color: #ffffff;
+
+            font-weight: 600;
+
+        }
+
+
+
+        /* Grade de Produtos */
+
+        .products-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(5, 1fr);
+
+            gap: 20px;
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .product-card {
+
+            background-color: #ffffff;
+
+            border-radius: 8px;
+
+            padding: 24px 20px;
+
+            text-align: left;
+
+            display: flex;
+
+            flex-direction: column;
+
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.03);
+
+            transition: transform 0.3s ease;
+
+        }
+
+
+
+        .product-card:hover {
+
+            transform: translateY(-3px);
+
+        }
+
+
+
+        .product-img-container {
+
+            width: 100%;
+
+            height: 160px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+
+            overflow: hidden;
+
+            border-radius: 4px;
+
+            background-color: #fcfcfc;
+
+        }
+
+
+
+        .product-img-container img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+
+        .product-category {
+
+            font-size: 9px;
+
+            letter-spacing: 1.5px;
+
+            color: #b5a48c;
+
+            text-transform: uppercase;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+        .product-title {
+
+            font-size: 13px;
+
+            color: #4a4a4a;
+
+            font-weight: 500;
+
+            line-height: 1.5;
+
+            margin-bottom: 12px;
+
+            min-height: 40px;
+
+        }
+
+
+
+        .product-price {
+
+            font-size: 13px;
+
+            color: #2b2b2b;
+
+            font-weight: 600;
+
+            margin-top: auto;
+
+        }
+
+
+
+        /* Otimização e Responsividade */
+
+        @media (max-width: 1100px) {
+
+            .products-grid { grid-template-columns: repeat(3, 1fr); }
+
+        }
+
+        @media (max-width: 768px) {
+
+            .navbar ul { gap: 15px; }
+
+            .navbar a { font-size: 9px; }
+
+            .hero-section { height: auto; padding: 120px 20px 60px 20px; }
+
+            .invite-card { height: auto; max-height: none; border-radius: 150px 150px 12px 12px; padding: 50px 20px; }
+
+            .title { font-size: 52px; }
+
+            .info-grid { gap: 50px; flex-direction: column; align-items: center; }
+
+            .carousel-container { height: 320px; }
+
+            .gifts-section { padding: 60px 20px; }
+
+            .gifts-section .section-title { font-size: 46px; }
+
+            .filter-btn { padding: 8px 18px; font-size: 9px; }
+
+            .products-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+
+        }
+
+        @media (max-width: 480px) {
+
+            .products-grid { grid-template-columns: 1fr; }
+
+        }
+
+        /* Estilo do Rodapé */
+.site-footer {
+    background-color: #3d2f26 !important; 
+    color: #f7e7c4 !important;            
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.footer-names {
+    font-family: 'Alex Brush', cursive;
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.footer-text {
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+/* Esconde o botão no desktop */
+.menu-toggle { display: none; }
+
+/* Estilo para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; background: none; border: none; font-size: 30px; color: white; cursor: pointer; }
+    
+    .nav-links {
+        display: none; /* Esconde o menu por padrão no celular */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Ajuste conforme a altura do seu header */
+        background-color: #333;
+    }
+    
+    .nav-links.active { display: flex; } /* Mostra o menu quando ativo */
+}
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <!-- Menu de Navegação Superior -->
+
+    <header class="navbar">
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#inicio">INÍCIO</a></li>
+
+                <li><a href="#detalhes">DETALHES DO EVENTO</a></li>
+
+                <li><a href="#Espaco">ESPAÇO DO EVENTO</a></li>
+
+                <li><a href="#presentes">LISTA DE PRESENTES</a></li>
+
+                <li><a href="#galeria">GALERIA</a></li>
+
+                <li><a href="#rsvp">CONFIRMAÇÃO DE PRESENÇA</a></li>
+
+                
+
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- SEÇÃO 1: Tela Inicial -->
+
+    <main id="inicio" class="hero-section">
+
+        <div class="invite-card">
+
+            <p class="date">06.02.2027</p>
+
+            <h1 class="title">Chá de casa nova</h1>
+
+            <div class="divider"></div>
+
+            <p class="address">
+
+                R. FREI FIDÉLIS MOTA, 784 –<br>
+
+                PARQUE CRUZEIRO DO SUL, SÃO<br>
+
+                PAULO – SP, 08070-130
+
+            </p>
+
+            <h2 class="names">Polly & Gabriel</h2>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- SEÇÃO 2: Detalhes do Evento -->
+
+    <section id="detalhes" class="details-section">
+
+        <p class="section-subtitle">DETALHES DO EVENTO</p>
+
+        <h2 class="section-title">Venha celebrar conosco</h2>
+
+        <div class="small-divider"></div>
+
+
+
+        <div class="info-grid">
+
+            <div onclick="abrirAgenda(event)" class="info-card" style="cursor: pointer;">
+
+                <div class="icon-circle">
+
+                    <svg viewBox="0 0 24 24"><path d="M19,4H18V2H16V4H8V2H6V4H5A2,2 0 0,0 3,6V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V6A2,2 0 0,0 19,4M19,20H5V10H19V20M19,8H5V6H19V8M7,12H9V14H7V12M11,12H13V14H11V12M15,12H17V14H15V12Z"/></svg>
+
+                </div>
+
+                <span class="card-label">DATA</span>
+
+                <p class="card-main-text">06 de Fevereiro de 2027</p>
+
+                <p class="card-sub-text">Sábado</p>
+
+            </div>
+
+
+
+            <div class="info-card no-link">
+
+                <div class="icon-circle">
+
+                    <svg viewBox="0 0 24 24"><path d="M12,20A8,8 0 1,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 1,0 22,12A10,10 0 0,0 12,2M12.5,7H11V13L16.25,16.15L17,14.92L12.5,12.25V7Z"/></svg>
+
+                </div>
+
+                <span class="card-label">HORÁRIO</span>
+
+                <p class="card-main-text">13h00 às 22h00</p>
+
+                <p class="card-sub-text">Esperamos você</p>
+
+            </div>
+
+
+
+            <div onclick="abrirMapa(event)" class="info-card" style="cursor: pointer;">
+
+                <div class="icon-circle">
+
+                    <svg viewBox="0 0 24 24"><path d="M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2M12,11.5A2.5,2.5 0 1,1 14.5,9A2.5,2.5 0 0,1 12,11.5Z"/></svg>
+
+                </div>
+
+                <span class="card-label">LOCAL</span>
+
+                <p class="card-main-text">R. Frei Fidelis Mota, 784</p>
+
+                <p class="card-sub-text">Parque Cruzeiro do Sul, São Paulo — SP</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SEÇÃO 3: Espaço do Evento -->
+
+    <section id="Espaco" class="photo-gallery-section">
+        <h2 class="section-title">Espaço do Evento</h2>
+        <div class="small-divider"></div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="Espaço Palooza 2.jpeg" alt="Pedido de Casamento Polly e Gabriel">
+            </div>
+            <div class="gallery-item">
+                <img src="Espaço Palooza 1.jpeg" alt="Polly e Gabriel">
+            </div>
+            <div class="gallery-item">
+                <img src="Espaço Palooza 3.jpeg" alt="Noivado na Montanha">
+            </div>
+            <div class="gallery-item">
+                <img src="Espaço Palooza 4.jpeg" alt="Aliança de Noivado">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- SEÇÃO 4: Lista de Presentes -->
+
+    <section id="presentes" class="gifts-section">
+
+        <p class="section-subtitle">LISTA DE PRESENTES</p>
+
+        <h2 class="section-title">Nosso enxoval</h2>
+
+        <div class="small-divider"></div>
+
+       
+
+        <p class="gifts-description">
+
+            Optamos por receber apenas contribuições via Pix. Pedimos também que escolha<br>
+
+            um presente ilustrativo em nossa lista de enxoval.
+
+        </p>
+
+
+
+        <p class="items-counter" id="itemsCounter">16 itens disponíveis</p>
+
+
+
+        <!-- Filtros por Categorias -->
+
+        <div class="filter-container">
+
+            <button class="filter-btn active" onclick="filterCategory('todos')">Todos</button>
+
+            <button class="filter-btn" onclick="filterCategory('eletros')">Eletros</button>
+
+            <button class="filter-btn" onclick="filterCategory('banheiro')">Banheiro</button>
+
+            <button class="filter-btn" onclick="filterCategory('organizacao')">Organização</button>
+
+            <button class="filter-btn" onclick="filterCategory('cozinha')">Cozinha</button>
+
+        </div>
+
+
+
+        <!-- Grade de Produtos Dinâmica -->
+
+        <div class="products-grid" id="productsGrid"></div>
+
+    </section>
+
+
+    
+
+
+    <script>
+
+        // JavaScript do Carrossel
+
+        const track = document.getElementById('carouselTrack');
+
+        const dots = document.querySelectorAll('.dot');
+
+        let currentIndex = 0;
+
+        function nextSlide() {
+
+            currentIndex = (currentIndex + 1) % 7;
+
+            track.style.transform = `translateX(-${currentIndex * (100 / 7)}%)`;
+
+            dots.forEach(d => d.classList.remove('active'));
+
+            dots[currentIndex].classList.add('active');
+
+        }
+
+        setInterval(nextSlide, 3000);
+
+
+
+        // Banco de Dados dos Itens - Atualizado com Eletros e Banheiro
+
+        const productsData = [
+
+            // ELETROS
+
+            { id: 1, category: 'eletros', title: 'Panela de Arroz', price: 'R$ 223,00', img: 'Panela de arroz.png' },
+
+            { id: 2, category: 'eletros', title: 'Aspirador de Pó Vertical', price: 'R$ 184,69', img: 'Aspirador de pó.png' },
+
+            { id: 3, category: 'eletros', title: 'Mixer Vertical', price: 'R$ 140,77', img: 'Mixer.png' },
+
+            { id: 5, category: 'eletros', title: 'Panela para Fondue 220V', price: 'R$ 230,00', img: 'Fondue.png' },
+
+            { id: 6, category: 'eletros', title: 'Batedeira', price: 'R$ 279,00', img: 'Batedeira.png' },
+
+            { id: 7, category: 'eletros', title: 'Air Fryer', price: 'R$ 559,99', img: 'Air flyer.png' },
+
+            { id: 8, category: 'eletros', title: 'Purificador de Água', price: 'R$ 676,93', img: 'Purificador de água.png' },
+
+            { id: 9, category: 'eletros', title: 'Micro-Ondas', price: 'R$ 862,29', img: 'Micro-ondas.png' },
+
+            { id: 10, category: 'eletros', title: 'Lava-Louça', price: 'R$ 2.238,88', img: 'Lava-louça.png' },
+
+            { id: 11, category: 'eletros', title: 'Robo Aspirador', price: 'R$ 800,00', img: 'Robo Aspirador.png' },
+
+            { id: 12, category: 'eletros', title: 'Kit Panela - mimo style', price: 'R$ 800,00', img: 'Kit Panela - mimo style.png' },
+
+            { id: 13, category: 'eletros', title: 'Cafeteira dolce', price: 'R$ 500,00', img: 'Cafeteira.png'},
+
+            { id: 14, category: 'eletros', title: 'Liquidificador Philco', price: 'R$ 500,00', img: 'Liquidificador Philco.png'},
+
+            { id: 15, category: 'Eletros', title: 'Churrasqueira', price: 'R$ 500,00', img: 'Churrasqueira.png' },
+
+
+            // BANHEIRO
+
+            { id: 12, category: 'banheiro', title: 'Jogo de Toalhas 5 Peças 2 Banho 2 Rosto', price: 'R$ 145,90', img: 'Jogo de Toalhas 5 Peças 2 Banho 2 Rosto.png' },
+
+            { id: 13, category: 'banheiro', title: 'Porta Algodão Cotonete Duplo Organizador', price: 'R$ 33,59', img: 'Porta algodão.png' },
+
+            { id: 15, category: 'banheiro', title: 'Jogo de Toalhas Karsten Banhão Gigante', price: 'R$ 284,84', img: 'Jogo de Toalhas Karsten Banhão Gigante.png' },
+
+            { id: 16, category: 'banheiro', title: 'Tapete de Pedra Diatomita', price: 'R$ 70,00', img: 'Tapete de Pedra Diatomita.png' },
+
+
+             // Organização
+
+            { id: 12, category: 'organizacao', title: 'Kit Caides', price: 'R$ 78,99', img: 'Kit Cabide.png' },
+
+            { id: 13, category: 'organizacao', title: 'Porta Talheres', price: 'R$ 147,90', img: 'Porta Talheres.png' },
+
+            { id: 14, category: 'organizacao', title: 'Kit Porta Guardanapo E Papel Toalha', price: 'R$ 59,90', img: 'Porta papel toalha e guardanapo.png' },
+
+            { id: 15, category: 'organizacao', title: 'Organizador Multiuso', price: 'R$45,90', img: 'Multiuso.png' },
+
+            { id: 16, category: 'organizacao', title: 'Organizador com Tampa', price: 'R$67,90', img: 'Organizador com Tampa.png' },
+
+            { id: 17, category: 'organizacao', title: 'Fruteira', price: 'R$ 135,00', img: 'Fruteira.png' },
+
+            { id: 18, category: 'organizacao', title: 'porta mantimentos bambu', price: 'R$ 50,00', img: 'porta mantimentos bambu.png' },
+
+            { id: 19, category: 'organizacao', title: 'Porta Utensilios', price: 'R$ 50,00', img: 'Porta Utensilios.png' },
+
+            { id: 20, category: 'organizacao', title: 'Jogo de 3 Cestos', price: 'R$ 50,00', img: 'Jogo de 3 Cestos.png' },
+
+
+            // Cozinha
+
+            
+
+            { id: 12, category: 'cozinha', title: 'Pegador', price: 'R$ 40,00', img: 'Pegador.png' },
+
+            { id: 13, category: 'cozinha', title: 'conjunto de xícara de 80ml', price: 'R$ 69,90', img: 'conjunto de xícara de 80ml.png' },
+
+            { id: 14, category: 'cozinha', title: 'Tapete kit de cozinha', price: 'R$ 69,90', img: 'Tapete kit de cozinha.png' },
+
+            { id: 15, category: 'cozinha', title: 'Aparelho de Jantar', price: 'R$ 500,00', img: 'Aparelho de Jantar.png' },
+
+            { id: 16, category: 'cozinha', title: 'Kit Ramequim', price: 'R$ 50,00', img: 'Kit Ramequim.png' },
+
+            { id: 17, category: 'cozinha', title: 'Kit Petisqueira', price: 'R$ 50,00', img: 'Kit Petisqueira.png' },
+
+            { id: 18, category: 'cozinha', title: 'Kit Coqueleira', price: 'R$ 70,00', img: 'Kit Coqueleira.png' },
+
+            { id: 19, category: 'cozinha', title: 'Conjunto de Bowls', price: 'R$ 100,00', img: 'Conjunto de Bowls.png' },
+
+            { id: 20, category: 'cozinha', title: 'Marinex Conjunto de Assadeiras', price: 'R$ 100,00', img: 'Marinex Conjunto de Assadeiras.png' },
+
+            { id: 21, category: 'cozinha', title: 'Conjunto de Xicaras', price: 'R$ 80,00', img: 'Conjunto de Xicaras.png'},
+
+            { id: 22, category: 'cozinha', title: 'Jogo de Facas', price: 'R$ 80,00', img: 'Jogo de Facas.png'},
+
+        ];
+
+
+
+        // Função para renderizar os cards na tela conforme o filtro solicitado
+
+        function renderProducts(categoryFilter) {
+
+            const grid = document.getElementById('productsGrid');
+
+            const counter = document.getElementById('itemsCounter');
+
+            grid.innerHTML = '';
+
+
+
+            let filtered = [];
+
+            if (categoryFilter === 'todos') {
+
+                filtered = productsData;
+
+            } else {
+
+                filtered = productsData.filter(product => product.category === categoryFilter);
+
+            }
+
+
+
+            // Atualiza o contador de itens na tela
+
+            counter.innerText = `${filtered.length} itens disponíveis`;
+
+
+
+            // Constrói os elementos HTML na tela
+
+           // Criação dos itens e controle de clique unificados no mesmo lugar
+    filtered.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card enxoval-item';
+        
+        // Atributos de identificação salvos direto na tag principal
+        card.setAttribute('data-id', product.id);
+        card.setAttribute('data-nome', product.title);
+        
+        // Converte o preço de texto para número puro (ex: de "R$ 147,90" para 147.90)
+        let valorLimpo = product.price.replace('R$', '').replace(/\./g, '').replace(',', '.').trim();
+        card.setAttribute('data-valor', parseFloat(valorLimpo));
+
+        // Mantém o item visualmente marcado caso mude de aba/filtro
+        if (window.carrinho && window.carrinho.some(item => item.id == product.id)) {
+            card.classList.add('selected');
+        }
+
+        // Montagem do seu layout original idêntico ao print
+        card.innerHTML = `
+            <div class="product-img-container">
+                <img src="${product.img}" alt="${product.title}">
+            </div>
+            <span class="product-category">${product.category}</span>
+            <h3 class="product-title">${product.title}</h3>
+            <p class="product-price">${product.price}</p>
+        `;
+
+        // ESCUTADOR DE CLIQUE INDEPENDENTE
+        card.addEventListener('click', () => {
+            // Garante a existência do carrinho globalmente na memória do navegador
+            if (!window.carrinho) { window.carrinho = []; }
+            
+            // Memória para guardar permanentemente os itens que já foram pagos
+           window.itensPagos = JSON.parse(localStorage.getItem('itensPagos')) || [];
+            
+            const id = card.getAttribute('data-id');
+            const nome = card.getAttribute('data-nome');
+            const valor = parseFloat(card.getAttribute('data-valor'));
+
+            const index = window.carrinho.findIndex(prod => prod.id == id);
+
+            if (index > -1) {
+                // Se já clicou antes, remove e tira a borda
+                window.carrinho.splice(index, 1);
+                card.classList.remove('selected');
+            } else {
+                // Se não clicou, adiciona ao carrinho e põe a borda
+                window.carrinho.push({ id, nome, valor });
+                card.classList.add('selected');
+            }
+
+            // Atualiza os elementos visuais da barra inferior na tela
+            const cartBar = document.getElementById('cartBar');
+            const cartCount = document.getElementById('cartCount');
+            const cartTotal = document.getElementById('cartTotal');
+
+            if (cartBar && cartCount && cartTotal) {
+                if (window.carrinho.length > 0) {
+                    let total = window.carrinho.reduce((sum, item) => sum + item.valor, 0);
+                    cartCount.innerText = `${window.carrinho.length} ${window.carrinho.length === 1 ? 'PRESENTE SELECIONADO' : 'PRESENTES SELECIONADOS'}`;
+                    cartTotal.innerText = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                    cartBar.style.display = 'block';
+                } else {
+                    cartBar.style.display = 'none';
+                }
+            }
+        });
+
+        grid.appendChild(card);
+    });
+
+        }
+
+
+
+       // Evento ao clicar em alguma das categorias
+        function filterCategory(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Define o botão ativo na interface protegendo o evento global
+            if (window.event && window.event.target) {
+                window.event.target.classList.add('active');
+            } else if (this && this.classList) {
+                this.classList.add('active');
+            }
+            
+            // Renderiza novamente a lista filtrada
+            renderProducts(category);
+        }
+
+        // Execução padrão ao iniciar o documento
+        renderProducts('todos');
+    </script>
+
+    <style>
+        .photo-gallery-section {
+            background-color: #fbf9f6;
+            padding: 80px 20px 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .photo-gallery-section .section-title {
+            font-family: 'Alex Brush', cursive;
+            font-size: 56px;
+            color: #2b2b2b;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .photo-gallery-section .small-divider {
+            width: 35px;
+            height: 1px;
+            background-color: #b5a48c;
+            margin: 15px auto 45px auto;
+        }
+
+        /* Grade perfeitamente simétrica para 4 fotos verticais sem buracos */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            width: 100%;
+            aspect-ratio: 3 / 4; /* Mantém a proporção exata e vertical das fotos originais */
+            overflow: hidden;
+            border-radius: 16px; /* Lindas bordas arredondadas suaves */
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #f5efe6;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Preenche o espaço sem distorcer as fotos */
+            object-position: center;
+            display: block;
+        }
+
+        /* Ajustes de responsividade para celulares e tablets */
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                max-width: 340px; /* Alinha o tamanho no celular */
+            }
+        }
+    </style>
+
+    <section id="galeria" class="photo-gallery-section">
+        <h2 class="section-title">Galeria do Casal</h2>
+        <div class="small-divider"></div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="4C9A0714.jpg" alt="Pedido de Casamento Polly e Gabriel">
+            </div>
+            <div class="gallery-item">
+                <img src="_DSC7602.jpg" alt="Polly e Gabriel">
+            </div>
+            <div class="gallery-item">
+                <img src="4C9A0684.jpg" alt="Noivado na Montanha">
+            </div>
+
+             <div class="gallery-item">
+                <img src="4C9A0548.jpg" alt="Aliança de Noivado">
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+        .rsvp-section {
+            background-color: #fbf9f6;
+            padding: 40px 20px 80px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .rsvp-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #b5a48c;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-weight: 500;
+            display: block;
+        }
+
+        .rsvp-section .section-title {
+            font-family: 'Alex Brush', cursive;
+            font-size: 56px;
+            color: #2b2b2b;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .rsvp-section .small-divider {
+            width: 35px;
+            height: 1px;
+            background-color: #b5a48c;
+            margin: 15px auto 40px auto;
+        }
+
+        .rsvp-container {
+            width: 100%;
+            max-width: 440px; /* Tamanho exato baseado no layout do formulário */
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .rsvp-field {
+            margin-bottom: 24px;
+        }
+
+        .rsvp-field label {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            color: #7a7a7a;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        /* Estilização idêntica dos inputs do seu print */
+        .rsvp-field input[type="text"],
+        .rsvp-field select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #e5dec9;
+            border-radius: 6px;
+            background-color: #fbf9f6;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: #2b2b2b;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s ease;
+        
+        }
+
+        /* Recria a seta fina elegante do select do print original */
+        .select-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .select-wrapper::after {
+            content: '❯';
+            font-size: 10px;
+            color: #2b2b2b;
+            transform: rotate(90deg);
+            position: absolute;
+            right: 18px;
+            top: 16px;
+            pointer-events: none;
+        }
+
+        .rsvp-field input[type="text"]:focus,
+        .rsvp-field select:focus {
+            border-color: #b5a48c;
+        }
+
+        /* Botão com o tom marrom escuro clássico do print */
+        .rsvp-btn {
+            width: 100%;
+            padding: 18px;
+            background-color: #2a231d; 
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 8px;
+        }
+
+        .rsvp-btn:hover {
+            background-color: #40362d;
+        }
+
+        @media (max-width: 480px) {
+            .rsvp-container {
+                padding: 0 8px;
+            }
+        }
+    </style>
+
+    <style>
+        .rsvp-section {
+            background-color: #fbf9f6;
+            padding: 40px 20px 80px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .rsvp-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #b5a48c;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-weight: 500;
+            display: block;
+        }
+
+        .rsvp-section .section-title {
+            font-family: 'Alex Brush', cursive;
+            font-size: 56px;
+            color: #2b2b2b;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .rsvp-section .small-divider {
+            width: 35px;
+            height: 1px;
+            background-color: #b5a48c;
+            margin: 15px auto 40px auto;
+        }
+
+        .rsvp-container {
+            width: 100%;
+            max-width: 440px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .rsvp-field {
+            margin-bottom: 24px;
+        }
+
+        .rsvp-field label {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            color: #7a7a7a;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .rsvp-field input[type="text"],
+        .rsvp-field select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #e5dec9;
+            border-radius: 6px;
+            background-color: #fbf9f6;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: #2b2b2b;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s ease;
+        
+        }
+
+        .select-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .select-wrapper::after {
+            content: '❯';
+            font-size: 10px;
+            color: #2b2b2b;
+            transform: rotate(90deg);
+            position: absolute;
+            right: 18px;
+            top: 16px;
+            pointer-events: none;
+        }
+
+        .rsvp-field input[type="text"]:focus,
+        .rsvp-field select:focus {
+            border-color: #b5a48c;
+        }
+
+        /* Container dos campos extras com transição suave */
+        .dynamic-fields-container {
+            display: block;
+        }
+
+        .extra-name-field {
+            margin-bottom: 20px;
+            animation: fadeInField 0.3s ease-in-out;
+        }
+
+        @keyframes fadeInField {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .rsvp-btn {
+            width: 100%;
+            padding: 18px;
+            background-color: #2a231d; 
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 8px;
+        }
+
+        .rsvp-btn:hover {
+            background-color: #40362d;
+        }
+
+        @media (max-width: 480px) {
+            .rsvp-container {
+                padding: 0 8px;
+            }
+        }
+    </style>
+
+   <style>
+        .rsvp-section {
+            background-color: #fbf9f6;
+            padding: 40px 20px 80px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .rsvp-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #b5a48c;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-weight: 500;
+            display: block;
+        }
+
+        .rsvp-section .section-title {
+            font-family: 'Alex Brush', cursive;
+            font-size: 56px;
+            color: #2b2b2b;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .rsvp-section .small-divider {
+            width: 35px;
+            height: 1px;
+            background-color: #b5a48c;
+            margin: 15px auto 40px auto;
+        }
+
+        .rsvp-container {
+            width: 100%;
+            max-width: 440px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .rsvp-field {
+            margin-bottom: 24px;
+        }
+
+        .rsvp-field label {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            color: #7a7a7a;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .rsvp-field input[type="text"],
+        .rsvp-field select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #e5dec9;
+            border-radius: 6px;
+            background-color: #fbf9f6;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: #2b2b2b;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s ease;
+         
+        }
+
+        .select-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .select-wrapper::after {
+            content: '❯';
+            font-size: 10px;
+            color: #2b2b2b;
+            transform: rotate(90deg);
+            position: absolute;
+            right: 18px;
+            top: 16px;
+            pointer-events: none;
+        }
+
+        .rsvp-field input[type="text"]:focus,
+        .rsvp-field select:focus {
+            border-color: #b5a48c;
+        }
+
+        .dynamic-fields-container {
+            display: block;
+        }
+
+        .extra-name-field {
+            margin-bottom: 20px;
+            animation: fadeInField 0.3s ease-in-out;
+        }
+
+        @keyframes fadeInField {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .rsvp-btn {
+            width: 100%;
+            padding: 18px;
+            background-color: #2a231d; 
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+           font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 8px;
+    }
+
+    .rsvp-btn:hover {
+        background-color: #40362d;
+    }
+
+    @media (max-width: 480px) {
+        .rsvp-container {
+            padding: 0 8px;
+        }
+    }
+
+    /* ======================================================== */
+    /* NOVOS ESTILOS DO ENXOVAL (Adicionados de forma segura)   */
+    /* ======================================================== */
+    .product-card.selected {
+        border: 2px solid #c5a980 !important;
+        box-shadow: 0 4px 15px rgba(197, 169, 128, 0.2);
+    }
+
+    .cart-bottom-bar {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 1140px;
+        background: #ffffff;
+        border: 1px solid #eadecc;
+        border-radius: 12px;
+        padding: 20px 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        z-index: 9999;
+    }
+
+    .cart-bar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cart-info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    #cartCount {
+        font-size: 11px;
+        letter-spacing: 1px;
+        color: #999999;
+        font-weight: 600;
+    }
+
+    .cart-total-text {
+        margin: 5px 0 0 0;
+        font-size: 20px;
+        color: #333333;
+        font-family: serif;
+    }
+
+    .confirm-choice-btn {
+        background-color: #c5a980;
+        color: white;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+        transition: background 0.3s ease;
+    }
+
+    .confirm-choice-btn:hover {
+        background-color: #b3966c;
+    }
+
+    .modal-overlay {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.6);
+        display: flex; justify-content: center; align-items: center;
+        z-index: 10000;
+    }
+
+    .modal-content {
+        background: white; padding: 30px; border-radius: 16px;
+        max-width: 450px; width: 90%; text-align: center; position: relative;
+    }
+
+    .close-modal-btn {
+        position: absolute; top: 15px; right: 20px;
+        background: none; border: none; font-size: 24px; cursor: pointer;
+    }
+
+    .modal-items-list {
+        text-align: left; background: #f9f6f0; padding: 15px;
+        border-radius: 8px; margin: 15px 0; max-height: 120px; overflow-y: auto;
+        font-size: 14px; color: #555;
+    }
+
+    .qr-container img { width: 180px; height: 180px; margin: 15px 0; }
+
+    .chave-container {
+        display: flex; align-items: center; justify-content: space-between;
+        background: #f4efe6; padding: 10px; border-radius: 8px; margin-bottom: 15px;
+    }
+
+    .copy-btn { background: none; border: none; cursor: pointer; color: #c5a980; font-weight: bold; }
+
+    .ja-paguei-btn {
+        background: #2b2520; color: white; border: none; width: 100%;
+        padding: 14px; border-radius: 8px; font-weight: bold; cursor: pointer;
+    }
+
+    select {
+    /* Remove a aparência padrão do navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Opcional: Para navegadores Internet Explorer/Edge antigos */
+select::-ms-expand {
+    display: none;
+}
+</style>
+
+    <section id="rsvp" class="rsvp-section">
+        <span class="rsvp-subtitle">Confirmação de Presença</span>
+        <h2 class="section-title">Confirme sua presença</h2>
+        <div class="small-divider"></div>
+
+        <div class="rsvp-container">
+            <form id="rsvpForm" action="#">
+                <div class="rsvp-field">
+                    <label for="nome">Seu Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Maria Silva" required>
+                </div>
+
+                <div class="rsvp-field">
+                    <label for="convidados">Número de Convidados</label>
+                    <div class="select-wrapper">
+                        <select id="convidados" name="convidados" onchange="updateGuestFields(this.value)">
+                            <option value="1">1 pessoa</option>
+                            <option value="2">2 pessoas</option>
+                            <option value="3">3 pessoas</option>
+                            <option value="4">4 pessoas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="dynamicFields" class="dynamic-fields-container"></div>
+                <button type="submit" class="rsvp-btn">Confirmar Presença</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="cartBar" class="cart-bottom-bar" style="display: none;">
+        <div class="cart-bar-content">
+            <div class="cart-info">
+                <span id="cartCount">0 PRESENTES SELECIONADOS</span>
+                <h4 class="cart-total-text">Total: <span id="cartTotal">R$ 0,00</span></h4>
+            </div>
+            <button class="confirm-choice-btn" onclick="openPixModal()">CONFIRMAR ESCOLHA &rarr;</button>
+        </div>
+    </div>
+
+    <div id="pixModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button class="close-modal-btn" onclick="closePixModal()">&times;</button>
+            <p style="font-size: 11px; letter-spacing: 1px; color: #c5a980; margin:0;">PAGAMENTO VIA PIX</p>
+            <h3 id="modalGuestCount" style="font-family: serif; font-size: 28px; margin: 10px 0;">0 presentes</h3>
+            <div id="modalItemsList" class="modal-items-list"></div>
+            <div style="font-size: 18px; font-weight: bold; margin-bottom: 15px;">Total: <span id="modalTotalValue">R$ 0,00</span></div>
+            <div class="qr-container">
+                <img src="QR code.jpeg" id="modalQrCode" alt="QR Code Pix">
+            </div>
+            <p style="font-size: 11px; color: #999; margin: 5px 0;">CHAVE PIX</p>
+            <div class="chave-container">
+                <span id="chavePixText">f_pollyana@yahoo.com</span>
+                <button class="copy-btn" onclick="copyChavePix()">Copiar</button>
+            </div>
+            <button class="ja-paguei-btn" onclick="confirmarPagamento()">JÁ PAGUEI ✓</button>
+        </div>
+    </div>
+
+    <script>
+        // Inicialização global do carrinho caso não tenha sido feita no topo
+        if (typeof carrinho === 'undefined') {
+            var carrinho = [];
+        }
+
+        // --- SISTEMA DO ENXOVAL (Funções da Barra e Pix) ---
+        function atualizarBarraInferior() {
+            const cartBar = document.getElementById('cartBar');
+            const cartCount = document.getElementById('cartCount');
+            const cartTotal = document.getElementById('cartTotal');
+
+            if (!cartBar || !cartCount || !cartTotal) return;
+
+            if (carrinho && carrinho.length > 0) {
+                let total = carrinho.reduce((sum, item) => sum + item.valor, 0);
+                cartCount.innerText = `${carrinho.length} ${carrinho.length === 1 ? 'PRESENTE SELECIONADO' : 'PRESENTES SELECIONADOS'}`;
+                cartTotal.innerText = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                cartBar.style.display = 'block';
+            } else {
+                cartBar.style.display = 'none';
+            }
+        }
+
+        function openPixModal() {
+            const modal = document.getElementById('pixModal');
+            const modalGuestCount = document.getElementById('modalGuestCount');
+            const modalItemsList = document.getElementById('modalItemsList');
+            const modalTotalValue = document.getElementById('modalTotalValue');
+
+            if (!carrinho || carrinho.length === 0) return;
+
+            modalItemsList.innerHTML = '';
+            let total = 0;
+
+            carrinho.forEach(item => {
+                total += item.valor;
+                const formattedValor = item.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                const p = document.createElement('p');
+                p.style.margin = '4px 0';
+                p.innerText = `${item.nome} — ${formattedValor}`;
+                modalItemsList.appendChild(p);
+            });
+
+            modalGuestCount.innerText = `${carrinho.length} ${carrinho.length === 1 ? 'presente' : 'presentes'}`;
+            modalTotalValue.innerText = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            modal.style.display = 'flex';
+        }
+
+        function closePixModal() {
+            document.getElementById('pixModal').style.display = 'none';
+        }
+
+        function copyChavePix() {
+            const textoChave = document.getElementById('chavePixText').innerText;
+            navigator.clipboard.writeText(textoChave).then(() => {
+                alert('Chave Pix copiada!');
+            });
+        }
+
+        function confirmarPagamento() {
+            alert('Obrigado pelo presente!');
+            carrinho = [];
+            atualizarBarraInferior();
+            closePixModal();
+            if(typeof renderProducts === 'function') renderProducts('todos');
+        }
+
+        // --- SISTEMA DO RSVP ORIGINAL ---
+        const PLANILHA_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbxZCpMLCdHLBsXUFpfcQTAAJRiWRZTJsAy2SqFDRWcfi_XUxrfVpGhPYHD-GOBPvF2Ltg/exec';
+
+        function updateGuestFields(quantity) {
+            const container = document.getElementById('dynamicFields');
+            container.innerHTML = '';
+            const totalPeople = parseInt(quantity, 10);
+            
+            for (let i = 2; i <= totalPeople; i++) {
+                const fieldDiv = document.createElement('div');
+                fieldDiv.className = 'rsvp-field extra-name-field';
+                fieldDiv.innerHTML = `
+                    <label for="acompanhante_${i}">Nome do Acompanhante ${i - 1}</label>
+                    <input type="text" id="acompanhante_${i}" name="acompanhante_${i}" placeholder="Nome completo" required>
+                `;
+                container.appendChild(fieldDiv);
+            }
+        }
+
+        document.getElementById('rsvpForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const titular = document.getElementById('nome').value;
+            const quantidade = document.getElementById('convidados').value;
+            
+            let acompanhantesLista = [];
+            if (quantidade > 1) {
+                for (let i = 2; i <= quantidade; i++) {
+                    const fieldElement = document.getElementById(`acompanhante_${i}`);
+                    if (fieldElement && fieldElement.value.trim() !== "") {
+                        acompanhantesLista.push(fieldElement.value.trim());
+                    }
+                }
+            }
+
+            const acompanhantesTexto = acompanhantesLista.join(', ');
+            const dadosSimplificados = new URLSearchParams();
+            dadosSimplificados.append('titular', titular);
+            dadosSimplificados.append('quantidade', quantidade);
+            dadosSimplificados.append('acompanhantes', acompanhantesTexto);
+
+            const numeroTelefone = "5511975889141";
+            let textoWhatsApp = `✨ *Confirmação de Presença no Chá de Casa* ✨\n\n`;
+            textoWhatsApp += `👤 *Nome:* ${titular}\n`;
+            textoWhatsApp += `👥 *Total de pessoas:* ${quantidade}\n`;
+            
+            if (acompanhantesLista.length > 0) {
+                textoWhatsApp += `\n📝 *Acompanhantes:*`;
+                acompanhantesLista.forEach((nome, index) => {
+                    textoWhatsApp += `\n  ${index + 1}. ${nome}`;
+                });
+            }
+
+            const textoCodificado = encodeURIComponent(textoWhatsApp);
+
+            try {
+                await fetch(PLANILHA_WEBAPP_URL, {
+                    method: 'POST',
+                    body: dadosSimplificados.toString(),
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    mode: 'no-cors'
+                });
+                
+            } catch (error) {
+                console.error('Erro na planilha:', error);
+            } finally {
+                window.location.href = `https://api.whatsapp.com/send?phone=${numeroTelefone}&text=${textoCodificado}`;
+            }
+        });
+        
+ // Fecha o addEventListener do formulário
+ </script>
+
+ <footer class="site-footer">
+    <h3 class="footer-names">Polly & Gabriel</h3>
+    <p class="footer-text">FEITO COM ❤️ PARA O NOSSO NOVO LAR</p>
+ </footer>
+
+ <script>
+    function abrirAgenda(event) {
+        if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        // Link do Google Agenda para 06/02/2027
+        const urlAgenda = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ch%C3%A1+de+Casa+Nova+%E2%9C%A8+Polly+%26+Gabriel&dates=20270206T190000/20270206T230000&details=Esperamos+voc%C3%AA+para+comemorar+conosco!&location=R.+Frei+Fid%C3%A9lis+Mota,+784";
+        window.open(urlAgenda, '_blank');
+    }
+    function abrirMapa(event) {
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    // URL do Google Maps para o endereço do evento
+    const urlMapa = "https://www.google.com/maps/search/?api=1&query=R.+Frei+Fid%C3%A9lis+Mota,+784+-+Parque+Cruzeiro+do+Sul,+S%C3%A3o+Paulo+-+SP";
+    window.open(urlMapa, '_blank');
+}
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+</script>
+</body>
+</html>
+

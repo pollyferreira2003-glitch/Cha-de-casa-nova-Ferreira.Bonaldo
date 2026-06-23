@@ -1,0 +1,1281 @@
+/* Configurações Globais Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+}
+
+/* Menu de Navegação Superior */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.2); /* Sutil fundo escuro para leitura */
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    transition: opacity 0.3s;
+}
+
+.navbar a:hover {
+    opacity: 0.7;
+}
+
+/* Seção Principal - Fundo da Cozinha com a Película Escura */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Substitua pelo caminho real da sua imagem de fundo se preferir local */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px; /* Compensa a altura do menu */
+}
+
+/* O Card Central Arredondado */
+.invite-card {
+    background-color: #fcfcfc;
+    width: 90%;
+    max-width: 420px;
+    height: 80vh;
+    max-height: 600px;
+    /* Faz o topo arredondado em arco e a base reta */
+    border-radius: 200px 200px 12px 12px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Detalhes de Texto Internos do Card */
+.date {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #695e50;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.title {
+    font-family: 'Alex Brush', cursive;
+    font-size: 64px;
+    color: #2b2b2b;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: lowercase; /* Mantém o estilo suave da escrita antiga */
+}
+
+/* Primeira letra maiúscula apenas para ajuste do estilo da fonte fluida */
+.title::first-letter {
+    text-transform: uppercase;
+}
+
+.divider {
+    width: 50px;
+    height: 1px;
+    background-color: #b5a48c;
+    margin-bottom: 30px;
+}
+
+.address {
+    font-size: 11px;
+    line-height: 1.8;
+    letter-spacing: 1.5px;
+    color: #8c7e6c;
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+
+.names {
+    font-family: 'Alex Brush', cursive;
+    font-size: 42px;
+    color: #2b2b2b;
+    font-weight: 400;
+}/* Seção de Detalhes */
+.details-section {
+    background-color: #fbf9f6; /* Fundo off-white idêntico ao Figma */
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #b5a48c;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-family: 'Alex Brush', cursive;
+    font-size: 54px;
+    color: #2b2b2b;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.small-divider {
+    width: 40px;
+    height: 1px;
+    background-color: #b5a48c;
+    margin-bottom: 60px;
+}
+
+/* Grid de Informações */
+.info-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap; /* Garante que quebre linha em telas de celular */
+}
+
+/* Estilo do Card Principal (Que serve como botão) */
+.info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit;
+    width: 280px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efeito visual ao passar o mouse por cima dos botões */
+.info-card:not(.no-link):hover {
+    transform: translateY(-5px);
+    opacity: 0.8;
+}
+
+.info-card.no-link {
+    cursor: default;
+}
+
+/* Círculo do Ícone */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #f3ece4; /* Tom sutil do círculo */
+    border: 1px solid #e3d7c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Desenho dos ícones dentro do círculo */
+.icon-circle svg {
+    width: 26px;
+    height: 26px;
+    fill: #b5a48c; /* Cor dourada antiga dos ícones */
+}
+
+.card-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #b5a48c;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card-main-text {
+    font-size: 18px;
+    color: #2b2b2b;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.card-sub-text {
+    font-size: 12px;
+    color: #8c7e6c;
+    font-weight: 300;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .info-grid {
+        gap: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Quando o card do presente é selecionado */
+.enxoval-item {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.enxoval-item.selected {
+    border-color: #c5a880; /* Cor Marrom Claro / Dourado da foto */
+    background-color: rgba(197, 168, 128, 0.05);
+}
+
+/* Barra inferior de confirmação */
+.cart-bottom-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1100px;
+    background-color: #faf6f0;
+    border: 1px solid #eadecc;
+    border-radius: 12px;
+    padding: 15px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    z-index: 999;
+}
+.cart-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-info span {
+    font-size: 12px;
+    color: #8c8c8c;
+    letter-spacing: 1px;
+}
+.cart-total-text {
+    font-size: 22px;
+    color: #333;
+    margin: 5px 0 0 0;
+}
+.confirm-choice-btn {
+    background-color: #c5a880;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.confirm-choice-btn:hover { background-color: #b3966e; }
+
+/* Modal do PIX (Fundo escurecido) */
+.modal-overlay {
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+.modal-content {
+    background-color: #faf6f0;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.close-modal-btn {
+    position: absolute; top: 15px; right: 20px;
+    background: none; border: none; font-size: 24px; cursor: pointer; color: #666;
+}
+.modal-subtitle { font-size: 11px; letter-spacing: 2px; color: #b3966e; margin-bottom: 5px; }
+.modal-title { font-family: 'Playfair Display', serif; font-style: italic; font-size: 28px; margin: 0 0 15px 0; }
+.modal-items-list {
+    background-color: #f3ede4;
+    border-radius: 8px;
+    padding: 12px;
+    max-height: 120px;
+    overflow-y: auto;
+    font-size: 13px;
+    text-align: left;
+    color: #555;
+    line-height: 1.6;
+}
+.modal-total { font-size: 20px; font-weight: bold; margin: 20px 0; color: #222; }
+.qr-container img { width: 180px; height: 180px; margin: 10px auto; display: block; border: 1px solid #eadecc; padding: 10px; background: #fff; border-radius: 10px; }
+.chave-title { font-size: 10px; letter-spacing: 1px; color: #8c8c8c; margin: 15px 0 5px 0; }
+.chave-container {
+    background-color: #f3ede4; padding: 10px 15px; border-radius: 8px;
+    display: flex; justify-content: space-between; align-items: center; max-width: 280px; margin: 0 auto 25px auto;
+}
+.copy-btn { background: none; border: none; cursor: pointer; color: #b3966e; }
+.ja-paguei-btn {
+    background-color: #312720; color: #fff; border: none; width: 100%;
+    padding: 14px; border-radius: 8px; font-weight: bold; cursor: pointer; letter-spacing: 1px;
+}
+.ja-paguei-btn:hover { background-color: #1f1814; }
+.modal-footer-text { font-size: 11px; color: #8c8c8c; margin-top: 10px; }
+
+
+        /* Configurações Globais e Reset */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        body {
+
+            font-family: 'Montserrat', sans-serif;
+
+            background-color: #fbf9f6;
+
+            color: #2b2b2b;
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        /* Menu de Navegação Superior */
+
+        .navbar {
+
+            position: absolute;
+
+            top: 0;
+
+            width: 100%;
+
+            z-index: 10;
+
+            padding: 20px 0;
+
+            background: rgba(0, 0, 0, 0.15);
+
+        }
+
+
+
+        .navbar ul {
+
+            display: flex;
+
+            justify-content: center;
+
+            list-style: none;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+
+            padding: 0 10px;
+
+        }
+
+
+
+        .navbar a {
+
+            text-decoration: none;
+
+            color: #ffffff;
+
+            font-size: 11px;
+
+            font-weight: 400;
+
+            letter-spacing: 2px;
+
+            transition: opacity 0.3s;
+
+        }
+
+
+
+        .navbar a:hover {
+
+            opacity: 0.7;
+
+        }
+
+
+
+        /* SEÇÃO 1: Tela Inicial */
+
+        .hero-section {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 100vh;
+
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2070');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding-top: 60px;
+
+        }
+
+
+
+        .invite-card {
+
+            background-color: #fcfcfc;
+
+            width: 90%;
+
+            max-width: 420px;
+
+            height: 80vh;
+
+            max-height: 600px;
+
+            border-radius: 200px 200px 12px 12px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px;
+
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+
+        }
+
+
+
+        .date {
+
+            font-size: 14px;
+
+            letter-spacing: 3px;
+
+            color: #695e50;
+
+            margin-bottom: 25px;
+
+            font-weight: 300;
+
+        }
+
+
+
+        .title {
+
+            font-family: 'Alex Brush', cursive;
+
+            font-size: 64px;
+
+            color: #2b2b2b;
+
+            font-weight: 400;
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+
+            text-transform: lowercase;
+
+        }
+
+
+
+        .title::first-letter {
+
+            text-transform: uppercase;
+
+        }
+
+
+
+        .divider {
+
+            width: 50px;
+
+            height: 1px;
+
+            background-color: #b5a48c;
+
+            margin-bottom: 30px;
+
+        }
+
+
+
+        .address {
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+            letter-spacing: 1.5px;
+
+            color: #8c7e6c;
+
+            margin-bottom: 35px;
+
+            font-weight: 400;
+
+        }
+
+
+
+        .names {
+
+            font-family: 'Alex Brush', cursive;
+
+            font-size: 42px;
+
+            color: #2b2b2b;
+
+            font-weight: 400;
+
+        }
+
+
+
+        /* SEÇÃO 2: Detalhes do Evento */
+
+        .details-section {
+
+            background-color: #fbf9f6;
+
+            padding: 100px 20px 60px 20px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+        }
+
+
+
+        .section-subtitle {
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            color: #b5a48c;
+
+            font-weight: 400;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .section-title {
+
+            font-family: 'Alex Brush', cursive;
+
+            font-size: 54px;
+
+            color: #2b2b2b;
+
+            font-weight: 400;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .small-divider {
+
+            width: 40px;
+
+            height: 1px;
+
+            background-color: #b5a48c;
+
+            margin-bottom: 60px;
+
+        }
+
+
+
+        .info-grid {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: flex-start;
+
+            gap: 80px;
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        .info-card {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-decoration: none;
+
+            color: inherit;
+
+            width: 280px;
+
+            cursor: pointer;
+
+            transition: transform 0.3s ease, opacity 0.3s ease;
+
+        }
+
+
+
+        .info-card:not(.no-link):hover {
+
+            transform: translateY(-5px);
+
+            opacity: 0.8;
+
+        }
+
+
+
+        .info-card.no-link {
+
+            cursor: default;
+
+        }
+
+
+
+        .icon-circle {
+
+            width: 70px;
+
+            height: 70px;
+
+            border-radius: 50%;
+
+            background-color: #f3ece4;
+
+            border: 1px solid #e3d7c7;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .icon-circle svg {
+
+            width: 26px;
+
+            height: 26px;
+
+            fill: #b5a48c;
+
+        }
+
+
+
+        .card-label {
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            color: #b5a48c;
+
+            font-weight: 600;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .card-main-text {
+
+            font-size: 18px;
+
+            color: #2b2b2b;
+
+            font-weight: 400;
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+        .card-sub-text {
+
+            font-size: 12px;
+
+            color: #8c7e6c;
+
+            font-weight: 300;
+
+        }
+
+
+
+        /* SEÇÃO 3: Espaço do Evento (Carrossel) */
+
+        .carousel-section {
+
+            background-color: #fbf9f6;
+
+            padding: 20px 20px 60px 20px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+        }
+
+
+
+        .carousel-container {
+
+            position: relative;
+
+            width: 100%;
+
+            max-width: 800px;
+
+            height: 500px;    
+
+            overflow: hidden;
+
+            border-radius: 12px;
+
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+
+            margin-top: 20px;
+
+        }
+
+
+
+        .carousel-track {
+
+            display: flex;
+
+            width: 700%;
+
+            height: 100%;
+
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+
+        }
+
+
+
+        .carousel-slide {
+
+            width: 14.285%;
+
+            height: 100%;
+
+        }
+
+
+
+        .carousel-slide img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+
+        .carousel-dots {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 25px;
+
+        }
+
+
+
+        .dot {
+
+            width: 8px;
+
+            height: 8px;
+
+            border-radius: 50%;
+
+            background-color: #e3d7c7;
+
+            transition: background-color 0.3s;
+
+        }
+
+
+
+        .dot.active {
+
+            background-color: #b5a48c;
+
+        }
+
+
+
+        /* SEÇÃO 4: Lista de Presentes */
+
+        .gifts-section {
+
+            background-color: #ede6dc;
+
+            padding: 80px 20px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+        }
+
+
+
+        .gifts-section .section-subtitle {
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            color: #b5a48c;
+
+            font-weight: 400;
+
+            margin-bottom: 10px;
+
+            text-transform: uppercase;
+
+        }
+
+
+
+        .gifts-section .section-title {
+
+            font-family: 'Alex Brush', cursive;
+
+            font-size: 56px;
+
+            color: #2b2b2b;
+
+            font-weight: 400;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .gifts-section .small-divider {
+
+            width: 35px;
+
+            height: 1px;
+
+            background-color: #b5a48c;
+
+            margin-bottom: 35px;
+
+        }
+
+
+
+        .gifts-description {
+
+            font-size: 12px;
+
+            line-height: 2;
+
+            letter-spacing: 0.8px;
+
+            color: #7a6f5f;
+
+            max-width: 640px;
+
+            margin: 0 auto 30px auto;
+
+            font-weight: 400;
+
+        }
+
+
+
+        .items-counter {
+
+            font-size: 11px;
+
+            color: #b5a48c;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 30px;
+
+            font-weight: 400;
+
+        }
+
+
+
+        /* Filtros por Categorias */
+
+        .filter-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+            max-width: 1000px;
+
+            width: 100%;
+
+            margin-bottom: 50px;
+
+        }
+
+
+
+        .filter-btn {
+
+            background-color: transparent;
+
+            border: 1px solid #d5cbb8;
+
+            color: #7a6f5f;
+
+            font-family: 'Montserrat', sans-serif;
+
+            font-size: 10px;
+
+            font-weight: 500;
+
+            letter-spacing: 2px;
+
+            padding: 10px 24px;
+
+            border-radius: 20px;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-transform: uppercase;
+
+        }
+
+
+
+        .filter-btn:hover {
+
+            border-color: #c4b499;
+
+            color: #2b2b2b;
+
+        }
+
+
+
+        .filter-btn.active {
+
+            background-color: #c4b499;
+
+            border-color: #c4b499;
+
+            color: #ffffff;
+
+            font-weight: 600;
+
+        }
+
+
+
+        /* Grade de Produtos */
+
+        .products-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(5, 1fr);
+
+            gap: 20px;
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .product-card {
+
+            background-color: #ffffff;
+
+            border-radius: 8px;
+
+            padding: 24px 20px;
+
+            text-align: left;
+
+            display: flex;
+
+            flex-direction: column;
+
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.03);
+
+            transition: transform 0.3s ease;
+
+        }
+
+
+
+        .product-card:hover {
+
+            transform: translateY(-3px);
+
+        }
+
+
+
+        .product-img-container {
+
+            width: 100%;
+
+            height: 160px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+
+            overflow: hidden;
+
+            border-radius: 4px;
+
+            background-color: #fcfcfc;
+
+        }
+
+
+
+        .product-img-container img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+
+        .product-category {
+
+            font-size: 9px;
+
+            letter-spacing: 1.5px;
+
+            color: #b5a48c;
+
+            text-transform: uppercase;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+        .product-title {
+
+            font-size: 13px;
+
+            color: #4a4a4a;
+
+            font-weight: 500;
+
+            line-height: 1.5;
+
+            margin-bottom: 12px;
+
+            min-height: 40px;
+
+        }
+
+
+
+        .product-price {
+
+            font-size: 13px;
+
+            color: #2b2b2b;
+
+            font-weight: 600;
+
+            margin-top: auto;
+
+        }
+
+
+
+        /* Otimização e Responsividade */
+
+        @media (max-width: 1100px) {
+
+            .products-grid { grid-template-columns: repeat(3, 1fr); }
+
+        }
+
+        @media (max-width: 768px) {
+
+            .navbar ul { gap: 15px; }
+
+            .navbar a { font-size: 9px; }
+
+            .hero-section { height: auto; padding: 120px 20px 60px 20px; }
+
+            .invite-card { height: auto; max-height: none; border-radius: 150px 150px 12px 12px; padding: 50px 20px; }
+
+            .title { font-size: 52px; }
+
+            .info-grid { gap: 50px; flex-direction: column; align-items: center; }
+
+            .carousel-container { height: 320px; }
+
+            .gifts-section { padding: 60px 20px; }
+
+            .gifts-section .section-title { font-size: 46px; }
+
+            .filter-btn { padding: 8px 18px; font-size: 9px; }
+
+            .products-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+
+        }
+
+        @media (max-width: 480px) {
+
+            .products-grid { grid-template-columns: 1fr; }
+
+        }
+.site-footer {
+    background-color: #3d2f26; /* Cor marrom escuro do rodapé */
+    color: #f7e7c4;            /* Cor dourada do texto */
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.footer-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.footer-text {
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+  
